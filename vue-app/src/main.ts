@@ -1,12 +1,9 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import { defineCustomElement } from 'vue'
+import { defineCustomElement } from 'vue';
+import App from './App.vue';
 
-// Definir o Web Component
-const AppElement = defineCustomElement(App)
+// Criar o Web Component
+const VueAppElement = defineCustomElement(App);
 
-// Registrar o Web Component
-customElements.define('vue-app', AppElement)
-
-// Criar a aplicação Vue
-createApp(App).mount('#app')
+if (!customElements.get('vue-app')) {
+    customElements.define('vue-app', VueAppElement);
+  }  

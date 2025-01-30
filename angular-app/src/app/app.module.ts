@@ -12,7 +12,7 @@ export class AppModule {
   constructor(private injector: Injector) {
     // Aqui nós criamos o CustomElement a partir do AppComponent
     const customElement = createCustomElement(AppComponent, { injector });
-    // Aqui nos definimos que ele se chamara 'angular-app'
+    // Aqui nos definimos que ele se chamará 'angular-app'
     // que será utilizado no HTML como <angular-app></angular-app>
     customElements.define('angular-app', customElement);
   }
