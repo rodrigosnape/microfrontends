@@ -1,10 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import ReactDOM from "react-dom/client";
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const App = () => (
+  <>
+    {}
+    <style>
+      {`.azul{
+          color: blue;
+        }`}
+    </style>
+    <h1 className="azul">Este é um Web Component do React</h1>
+  </>
+);
+
+// Criar e montar o Web Component
+const mountPoint = document.createElement("div");
+document.body.appendChild(mountPoint);
+ReactDOM.createRoot(mountPoint).render(<App />);

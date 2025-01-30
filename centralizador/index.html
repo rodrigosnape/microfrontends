@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="./vue-web-component/vue-app.css">
   <title>Microfrontends com Web Components</title>
   <script src="./angular-web-component/polyfills.js"></script>
   <script src="./angular-web-component/main.js"></script>
   <script src="./angular-web-component/runtime.js"></script>
-
-  
+ 
   <script src="./vue-web-component/vue-app.js"></script>
   <script src="./vue-web-component/vue-app.umd.cjs"></script>
+
+  <script type="module" src="./react-web-component/react-app.js"></script>
 </head>
+<style>
+  body{  text-align: center;font-family: sans-serif};
+</style>
 <body>
   <h1>Microfrontends com Web Components</h1>
   <angular-app></angular-app>
   <vue-app></vue-app>
+  <react-app></react-app>
 </body>
 </html>
